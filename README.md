@@ -1,81 +1,54 @@
+[index.html](https://github.com/user-attachments/files/23942096/index.html)
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Mini Calculator</title>
+    <title>Simple App</title>
     <meta charset="UTF-8">
     <style>
         body {
             font-family: Arial;
             text-align: center;
-            margin-top: 60px;
-            background-color: #f0f9ff;
+            margin-top: 80px;
+            background: #f1f5f9; /* light background */
         }
 
         h1 {
-            color: #0f172a;
-        }
-
-        .box {
-            background: white;
-            padding: 20px;
-            width: 300px;
-            margin: auto;
-            border-radius: 12px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-
-        input {
-            padding: 10px;
-            width: 90%;
-            margin-bottom: 10px;
-            font-size: 16px;
-            border-radius: 6px;
-            border: 1px solid #94a3b8;
+            color: #1e3a8a; /* dark blue */
         }
 
         button {
-            padding: 10px 20px;
+            padding: 12px 25px;
             font-size: 16px;
             cursor: pointer;
             border: none;
             border-radius: 8px;
-            background-color: #10b981; /* green */
+            background-color: #2563eb; /* blue */
             color: white;
             transition: 0.3s;
         }
 
         button:hover {
-            background-color: #059669; /* darker green */
+            background-color: #1e40af; /* darker blue */
         }
 
-        #result {
-            margin-top: 15px;
-            font-size: 20px;
-            color: #2563eb; /* blue */
+        #message {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #16a34a; /* green */
         }
     </style>
 </head>
-
 <body>
 
-    <h1>Mini Calculator</h1>
+    <h1>Welcome to My Simple App</h1>
 
-    <div class="box">
-        <input type="number" id="num1" placeholder="Enter first number">
-        <input type="number" id="num2" placeholder="Enter second number">
+    <button onclick="showMessage()">Click Me</button>
 
-        <button onclick="add()">Add</button>
-
-        <p id="result"></p>
-    </div>
+    <p id="message"></p>
 
     <script>
-        function add() {
-            let n1 = Number(document.getElementById("num1").value);
-            let n2 = Number(document.getElementById("num2").value);
-            let sum = n1 + n2;
-
-            document.getElementById("result").innerHTML = "Result: " + sum;
+        function showMessage() {
+            document.getElementById("message").innerHTML = "Button clicked!";
         }
     </script>
 
